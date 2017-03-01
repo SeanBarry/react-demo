@@ -40,7 +40,7 @@ body {
 	.text {
 		padding: 15px;
 		display: inline-block;
-		width: 70%;
+		width: 50%;
 		box-sizing: border-box;
 	}
 
@@ -48,8 +48,19 @@ body {
 		padding: 15px;
 		box-sizing: border-box;
 		display: inline-block;
-		width: 29%;
+		width: 30%;
 		text-align: right;
+	}
+
+	.delete {
+		padding-left: 10px;
+		box-sizing: border-box;
+		display: inline-block;
+		width: 9%;
+		text-align: left;
+		color: red;
+		font-weight: bold;
+		cursor: pointer;
 	}
 }
 

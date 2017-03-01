@@ -2,6 +2,7 @@
   <title>Messaging Application</title>
 </head>
 
+
 <body>
   <div class="wrapper">
     <div class="title">
@@ -20,19 +21,25 @@
 
 
 
-
-
 <template name="MessageList">
     {{#each messages}}
       {{> Message}}
+    {{else}}
+      <div class="message">
+        <div class="text">
+          No Messages Found
+        </div>
+      </div>
     {{/each}}
 </template>
 
 
 
-
 <template name="Message">
   <div class="message">
+    <div class="delete">
+      X
+    </div>
     <div class="text">
       {{message}}
     </div>
@@ -41,8 +48,6 @@
     </div>
   </div>
 </template>
-
-
 
 
 
