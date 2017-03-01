@@ -1,0 +1,11 @@
+<template name="MessageList">
+    {{#each messages}}
+      {{> Message}}
+    {{else}}
+      <div class="message">
+        <div class="text">
+          No Messages Found
+        </div>
+      </div>
+    {{/each}}
+</template>
