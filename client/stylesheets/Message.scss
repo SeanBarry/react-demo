@@ -1,0 +1,31 @@
+.message {
+	border-bottom: 1px solid #F6F8FA;
+	border-top: 1px solid #F6F8FA;
+	box-sizing: border-box;
+
+	.text {
+		padding: 15px;
+		display: inline-block;
+		width: 50%;
+		box-sizing: border-box;
+	}
+
+	.time {
+		padding: 15px;
+		box-sizing: border-box;
+		display: inline-block;
+		width: 30%;
+		text-align: right;
+	}
+
+	.delete {
+		padding-left: 10px;
+		box-sizing: border-box;
+		display: inline-block;
+		width: 9%;
+		text-align: left;
+		color: red;
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
