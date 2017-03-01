@@ -96,20 +96,37 @@ class Message extends React.Component {
 	constructor(props) {
 		super(props);
 		this.formatDate = this.formatDate.bind(this);
+		this.deleteMessage = this.deleteMessage.bind(this);
+	}
+
+	componentDidMount() {
+		console.log('Message has been rendered!')
+	}
+
+	componentWillUnmount() {
+		console.log('Message has been destroyed!');
 	}
 
 	formatDate(date) {
 		return moment(date).format('ddd, H:mma');
 	}
 
+	deleteMessage(id) {
+		return Messages.remove(this.props.message._id)
+	}
+
 	render() {
+		const { message } = this.props;
 		return (
 			<div className="message">
+				<div className="delete" onClick={this.deleteMessage}>
+					X
+				</div>
 				<div className="text">
-					{this.props.message.message}
+					{message.message}
 				</div>
 				<div className="time">
-					{this.formatDate(this.props.message.date)}
+					{this.formatDate(message.date)}
 				</div>
 			</div>
 		)
