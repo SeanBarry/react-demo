@@ -17,13 +17,13 @@ Template.Message.helpers({
 });
 
 
-Template.Message.onRendered(() => {
-  console.log('Message has been rendered!');  
+Template.Message.onRendered(function() {
+  console.log('Message ID: ' + this.data._id + ' has been rendered!');  
 });
 
 
-Template.Message.onDestroyed(() => {
-  console.log('Message has been destroyed!');  
+Template.Message.onDestroyed(function() {
+  console.log('Message ID: ' + this.data._id + ' has been destroyed!');  
 });
 
 
