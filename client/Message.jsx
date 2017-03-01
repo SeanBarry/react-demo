@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 import { Messages } from '/lib/messages';
+import moment from 'moment';
 
 export class Message extends React.Component {
 	constructor(props) {
