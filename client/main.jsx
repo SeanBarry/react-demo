@@ -10,7 +10,7 @@ Meteor.startup(() => {
 });
 
 
-
+//////////////////////    App    //////////////////////
 export class App extends React.Component {
   constructor(props) {
   	super(props);
@@ -37,15 +37,9 @@ export class App extends React.Component {
 }
 
 
-class MessageList extends React.Component {
-	constructor(props) {
-		super(props);
-		this.renderMessages = this.renderMessages.bind(this);
-	}
-
-	renderMessages() {
-		const messages = this.props.messages;
-		return messages.length > 0 ? messages.map((message) => {
+///////////////////// MessageList /////////////////////
+const renderMessages = (messages) => {
+	return messages.length > 0 ? messages.map((message) => {
 			return <Message key={message._id} message={message} />
 		}) :
 		<div className="message">
@@ -53,19 +47,18 @@ class MessageList extends React.Component {
 				No Messages Found
 			</div>
 		</div>
-	}
+}
 
-	render() {
-		return (
-			<div>
-		  		{this.renderMessages()}
-		  	</div>
-		);
-	}
+const MessageList = ({messages})=> {
+	return (
+		<div>
+			{renderMessages(messages)}
+		</div>
+	)
 }
 
 
-
+///////////////////// SubmitMessage /////////////////////
 class SubmitMessage extends React.Component { 
 	constructor(props) {
 		super(props);
@@ -91,7 +84,7 @@ class SubmitMessage extends React.Component {
 	}
 }
 
-
+///////////////////// Message /////////////////////
 class Message extends React.Component {
 	constructor(props) {
 		super(props);
@@ -100,11 +93,11 @@ class Message extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log('Message has been rendered!')
+		console.log('Message ID: ' + this.props.message._id + ' has been rendered!')
 	}
 
 	componentWillUnmount() {
-		console.log('Message has been destroyed!');
+		console.log('Message ID: ' + this.props.message._id + '  has been destroyed!');
 	}
 
 	formatDate(date) {
