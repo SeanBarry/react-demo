@@ -1,0 +1,14 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);
+
+$font: 'Source Sans Pro', sans-serif;
+
+body {
+	background: #F6F8FA;
+	padding: 30px;
+	font-family: $font;
+	color: #333;
+}
+
+@import 'App';
+@import 'Message';
+@import 'SubmitMessage';
