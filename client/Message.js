@@ -17,8 +17,7 @@ Template.Message.helpers({
 });
 
 Template.Message.events({
-  'click .delete': function(event) {
-    event.preventDefault();
+  'click .delete': function() {
     const messageId = this._id;
 
     Messages.remove({
