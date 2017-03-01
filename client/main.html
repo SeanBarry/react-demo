@@ -6,37 +6,3 @@
   
   <div id="app"></div>
 </body>
-
-
-
-
-
-<template name="MessageList">
-    {{#each messages}}
-      {{> Message}}
-    {{/each}}
-</template>
-
-
-
-
-<template name="Message">
-  <div class="message">
-    <div class="text">
-      {{message}}
-    </div>
-    <div class="time">
-      {{formatDate date}}
-    </div>
-  </div>
-</template>
-
-
-
-
-
-<template name="SubmitMessage">
-  <form id="sendMessage">
-    <input type="text" name="message" placeholder="Type a message...">
-  </form>
-</template>
