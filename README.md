@@ -1,6 +1,6 @@
 ## React/Blaze Demo
 
-This tiny application was written as part of my talk at the first [https://twitter.com/ReactEdinburgh/status/837033436682543104](React Edinburgh Meetup in March 2017).
+This tiny application was written as part of my talk at the first [https://twitter.com/ReactEdinburgh/status/837033436682543104](React Edinburgh Meetup in March 2017) .
 
 The application has two branches - a version of the application in React.js and a version in Blaze.js
 
